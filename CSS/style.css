@@ -12,6 +12,16 @@
     will-change: transform;
   }
 
+  .paralllax {
+    perspective: 2px;
+  }
+  
+  .parallax__wrapper {
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
 /* --------------------------------
 
 File#: _1_sticky-hero
@@ -42,6 +52,8 @@ Usage: Pour faire du mouvement
     transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
     transform: translateZ(0);
   }
+
+  
   
   
   
