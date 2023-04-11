@@ -669,6 +669,14 @@ video {
   width: 100%;
 }
 
+.\!w-\[calc\(100\%_-_2\.5rem\)\] {
+  width: calc(100% - 2.5rem) !important;
+}
+
+.w-\[calc\(100\%_-_9\.5rem\)\] {
+  width: calc(100% - 9.5rem);
+}
+
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -890,16 +898,28 @@ video {
   padding-top: 2rem;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .text-center {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-justify {
   text-align: justify;
+}
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .text-2xl {
@@ -1009,6 +1029,16 @@ video {
 
 .parallax {
   perspective: 4000px;
+}
+
+.parallax__wrapper {
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.paralllax {
+  perspective: 2px;
 }
 
 .parallax__wrapper {
@@ -1224,6 +1254,30 @@ Usage: codyhouse.co/license
     width: calc(100% - 4rem);
   }
 
+  .lg\:w-\[calc\(100\%_-_3rem\)\] {
+    width: calc(100% - 3rem);
+  }
+
+  .lg\:w-\[calc\(100\%_-_2rem\)\] {
+    width: calc(100% - 2rem);
+  }
+
+  .lg\:w-\[calc\(100\%_-_rem\)\] {
+    width: calc(100% - rem);
+  }
+
+  .lg\:w-\[calc\(100\%_-_0\.5rem\)\] {
+    width: calc(100% - 0.5rem);
+  }
+
+  .lg\:w-\[calc\(100\%_-_5rem\)\] {
+    width: calc(100% - 5rem);
+  }
+
+  .lg\:w-\[calc\(100\%_-_8rem\)\] {
+    width: calc(100% - 8rem);
+  }
+
   .lg\:p-8 {
     padding: 2rem;
   }
@@ -1248,6 +1302,11 @@ Usage: codyhouse.co/license
 
   .lg\:text-8xl {
     font-size: 6rem;
+    line-height: 1;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 }
