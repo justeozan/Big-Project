@@ -30,6 +30,11 @@ Descr: A sticky hero section that reveals its content on scroll
 Usage: Pour faire du mouvement
 
 -------------------------------- */
+.emologo {
+  justify-content: left;
+  border-left: 0ch !important;
+}
+
 .sticky-hero {
     position: relative;
     z-index: 1;
@@ -66,10 +71,11 @@ Usage: Pour faire du mouvement
   .sticky-hero__content {
     position: relative;
     z-index: 2;
-    height: 185vh;
+    height: 125vh;
     display: flex;
     justify-content: right;
     padding-right: 6rem;
+    padding-left: 6rem;
     align-items: center;
     transform: translateZ(0);
   }
