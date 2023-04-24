@@ -574,10 +574,6 @@ video {
   top: 0px;
 }
 
-.top-5 {
-  top: 1.25rem;
-}
-
 .-mx-4 {
   margin-left: -1rem;
   margin-right: -1rem;
@@ -619,10 +615,6 @@ video {
 
 .mb-8 {
   margin-bottom: 2rem;
-}
-
-.mb-9 {
-  margin-bottom: 2.25rem;
 }
 
 .block {
@@ -675,10 +667,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[calc\(100\%_-_8rem\)\] {
-  width: calc(100% - 8rem);
 }
 
 .max-w-3xl {
@@ -900,10 +888,6 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.text-left {
-  text-align: left;
 }
 
 .text-center {
@@ -1258,42 +1242,6 @@ Usage: codyhouse.co/license
 
   .lg\:w-\[calc\(100\%_-_4rem\)\] {
     width: calc(100% - 4rem);
-  }
-
-  .lg\:w-\[calc\(100\%_-_rem\)\] {
-    width: calc(100% - rem);
-  }
-
-  .lg\:w-\[calc\(100\%_-_8rem\)\] {
-    width: calc(100% - 8rem);
-  }
-
-  .lg\:w-\[calc\(100\%_-_2rem\)\] {
-    width: calc(100% - 2rem);
-  }
-
-  .lg\:w-\[calc\(100\%_-_20rem\)\] {
-    width: calc(100% - 20rem);
-  }
-
-  .lg\:w-2 {
-    width: 0.5rem;
-  }
-
-  .lg\:w-0 {
-    width: 0px;
-  }
-
-  .lg\:w-11 {
-    width: 2.75rem;
-  }
-
-  .lg\:w-1 {
-    width: 0.25rem;
-  }
-
-  .lg\:w-96 {
-    width: 24rem;
   }
 
   .lg\:p-8 {

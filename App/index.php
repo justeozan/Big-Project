@@ -42,16 +42,16 @@
             <div>
                 <ul id="menubar" class="hidden md:flex flex-row gap-12 text-lg">
                     <li>
-                        <a class="hover-underline-animation" href="#about">Accueil</a>
+                        <a class="hover-underline-animation" href="#accueil">Accueil</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="#skills">Compétences</a>
+                        <a class="hover-underline-animation" href="#compétences">Compétences</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="#history">Projets</a>
+                        <a class="hover-underline-animation" href="#projets">Projets</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="#projects">Histoire</a>
+                        <a class="hover-underline-animation" href="#histoire">Histoire</a>
                     </li>
                     <li>
                         <a class="hover-underline-animation" href="#contact">Contact</a>
@@ -125,9 +125,9 @@
 
         <div class="sticky-hero__content">
             <div class=" w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] max-w-3xl">
-                <h1 class=" text-2xl md:text-3xl lg:text-8xl font-bold text-white text-right font-serif">Étudiant en Cybersécurité</h1>
+                <h1 class="uppercase text-2xl md:text-3xl lg:text-8xl font-bold text-white text-right font-serif">Étudiant en Cybersécurité</h1>
                 <!-- <p class="text-xl md:text-2xl lg:text-8xl text-white text-right font-serif"></p> -->
-                <p class="mb-12 text-xl md:text-2xl lg:text-5xl text-white text-right font-serif">Juste Ozan</p>
+                <p class="uppercase mb-12 text-xl md:text-2xl lg:text-5xl text-white text-right ">Juste Ozan</p>
                 <p class="mb-3 text-xl md:text-2xl lg:text-4xl text-white text-right font-serif">Insta</p>
                 <p class="mb-3 text-xl md:text-2xl lg:text-4xl text-white text-right font-serif">Linkedin</p>
                 <p class="mb-3 text-xl md:text-2xl lg:text-4xl text-white text-right font-serif"> </p>
