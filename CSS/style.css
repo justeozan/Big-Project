@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  scroll-behavior: smooth;	
+}
+
 .parallax {
     perspective: 4000px;
   }
