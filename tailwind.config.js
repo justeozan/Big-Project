@@ -2,11 +2,7 @@
 module.exports = {
   content: ["./App/**/*.{html,js}"],
   theme: {
-    extend: {
-      // backgroundImage: {
-      //   'ozanmid': "url('./img/ozanmid.jpg)",
-      // }
-    },
+    extend: {},
   },
   plugins: [],
 }

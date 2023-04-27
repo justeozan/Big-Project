@@ -1,10 +1,14 @@
+<?php 
+require "../cfg/config.php"; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="
-          Etudiant en cybersécurité, en recherche d'innovation et ...">
+        Etudiant en cybersécurité, en recherche d'innovation et ...">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="dist/style.css">
     <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css">
@@ -27,9 +31,29 @@
     <meta hhtp-equiv="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="../dist/style.css">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" href="../img/SOI_remove.png">
 
     <title>juste_ozan</title>
 </head>
+
+<!-- RECUP DONNEE + VARIABLE -->
+<?php
+    $sql = "SELECT * FROM guestbook";
+    $pre = $pdo->prepare($sql);
+    $pre->bindParam('id', $_POST['id']);
+    $pre->execute();
+    $data = $pre->fetch(PDO::FETCH_ASSOC);
+
+    $id = "#".$data["id"];
+    $pseudo = $data["pseudo"];
+    $message = $data['message'];
+    
+?>
+
+
+
+
+
 
 <body>
 
@@ -37,25 +61,20 @@
     <nav>
         <div class="back-color flex flex-row justify-around items-center pb-4 pt-4" data-target-in="#sticky-banner-target">
             <div>
-                <a href="easter.egg.html"><img class="w-14" onclick="topFunction()" src="../img/SOI_remove.png" alt="SOI"></a>
+                <a href="games.html"><img class="w-10" onclick="topFunction()" src="../img/SOI_remove.png" alt="SOI"></a>
             </div>
             <div>
                 <ul id="menubar" class="hidden md:flex flex-row gap-12 text-lg">
                     <li>
-                        <a class="hover-underline-animation" href="#accueil">Accueil</a>
+                        <a class="hover-underline-animation" href="path.html">Chemin</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="#compétences">Compétences</a>
+                        <a class="hover-underline-animation" href="ambition.html">Ambition</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="#projets">Projets</a>
+                        <a class="hover-underline-animation" href="meeting.html">Rencontre</a>
                     </li>
-                    <li>
-                        <a class="hover-underline-animation" href="#histoire">Histoire</a>
-                    </li>
-                    <li>
-                        <a class="hover-underline-animation" href="#contact">Contact</a>
-                    </li>
+                    
                 </ul>
             </div>
             <div class="md:hidden">
@@ -78,20 +97,15 @@
             <div>
                 <ul id="menubar" class="hidden md:flex flex-row gap-12 text-lg">
                     <li>
-                        <a class="hover-underline-animation" href="#about">Accueil</a>
+                        <a class="hover-underline-animation" href="path.html">Chemin</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="#skills">Compétences</a>
+                        <a class="hover-underline-animation" href="ambition.html">Ambition</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="#history">Projets</a>
+                        <a class="hover-underline-animation" href="meeting.html">Rencontre</a>
                     </li>
-                    <li>
-                        <a class="hover-underline-animation" href="#projects">Histoire</a>
-                    </li>
-                    <li>
-                        <a class="hover-underline-animation" href="#contact">Contact</a>
-                    </li>
+                    
                 </ul>
             </div>
             <div class="md:hidden">
@@ -106,339 +120,393 @@
     </nav>
 
 
-    <!-- <div class="sticky-banner bg-white shadow-md js-sticky-banner" data-target-in="#sticky-banner-target"> -->
-        <!--👇 sticky banner content -->
-        <!-- <p class="text-center p-5 lg:p-8">Sticky Banner</p>
-    </div> -->
-
 
     <section class="sticky-hero mb-12 lg:mb-20 js-sticky-hero" id="sticky-banner-target">
-        <div class="sticky-hero__media parallax overflow-hidden [&.parallax--loaded]:opacity-100 js-parallax" aria-hidden="true">
+        <div class="sticky-hero__media parallax overflow-hidden  js-parallax" aria-hidden="true">
             <figure class="parallax__wrapper relative transition-transform duration-[400ms] ease-out js-parallax__wrapper">
-              <img class="block w-full  js-parallax__item" src="../img/ozanmid.jpg" alt="Image description">
-              <!-- <img class="block w-full absolute top-0 left-0 js-parallax__item" src="https://d3ae4wrz2ljkbq.cloudfront.net/components/parallax-img-2.svg" data-parallax-distance="100" aria-hidden="true"> -->
-              <!-- <img class="block w-full absolute top-0 left-0 js-parallax__item" src="htttps://d3ae4wrz2ljkbq.cloudfront.net/components/parallax-img-2.svg" data-parallax-distance="100" aria-hidden="true">
-              <img class="block w-full absolute top-0 left-0 js-parallax__item" src="htttps://d3ae4wrz2ljkbq.cloudfront.net/components/parallax-img-3.svg" data-parallax-distance="200" aria-hidden="true">
-              <img class="block w-full absolute top-0 left-0 js-parallax__item" src="htttps://d3ae4wrz2ljkbq.cloudfront.net/components/parallax-img-4.svg" data-parallax-distance="300" aria-hidden="true"> -->
+            <img class="block w-full  js-parallax__item" src="../img/ozanmid.jpg" alt="Image description">
+
             </figure>
         </div>
 
         <div class="sticky-hero__content">
-            <div class=" w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] max-w-3xl">
-                <h1 class="uppercase text-2xl md:text-3xl lg:text-8xl font-bold text-white text-right font-serif">Étudiant en Cybersécurité</h1>
-                <!-- <p class="text-xl md:text-2xl lg:text-8xl text-white text-right font-serif"></p> -->
-                <p class="uppercase mb-12 text-xl md:text-2xl lg:text-5xl text-white text-right ">Juste Ozan</p>
-                <p class="mb-3 text-xl md:text-2xl lg:text-4xl text-white text-right font-serif">Insta</p>
-                <p class="mb-3 text-xl md:text-2xl lg:text-4xl text-white text-right font-serif">Linkedin</p>
-                <p class="mb-3 text-xl md:text-2xl lg:text-4xl text-white text-right font-serif"> </p>
-                <i class="black fi fi-brands-github">github</i>
-                <p class="mb-3 text-xl md:text-2xl lg:text-4xl text-white text-right font-serif">cynergy</p>
+            <div class="w-screen ">
+                <h1 class=" text-2xl md:text-3xl lg:text-8xl font-bold text-white text-right font-serif">Étudiant en Cybersécurité</h1>
+                
+                <p class="mb-12 text-xl md:text-2xl lg:text-5xl text-white text-right font-serif">Juste Ozan</p>
+                <section class="pt-32">
+                    <a href="https://www.instagram.com/juste_ozan/"><img class="h-10 mb-3 text-xl md:text-2xl lg:text-4xl" src="../img/instagram.png" alt="instagram"></a>
+                    <a href="https://www.linkedin.com/in/juste-ozan/"><img  class="h-10 mb-3 text-xl md:text-2xl lg:text-4xl" src="../img/linkedin.png" alt="linkedin"></a>
+                    <a href="https://github.com/osahinGuardia"><img class="h-10 mb-3 text-xl md:text-2xl lg:text-4xl" src="../img/github.png" alt="github"></a>
+                </section>
+                
+
+                <!-- <p class="mb-3 text-xl md:text-2xl lg:text-4xl text-white font-serif">Linkedin</p>
+                <p class="mb-3 text-xl md:text-2xl lg:text-4xl text-white font-serif"><i class="black fi fi-brands-github">github</i></p>
+                <p class="mb-3 text-xl md:text-2xl lg:text-4xl text-white font-serif">cynergy</p> -->
 
             </div>
         </div>
     </section>
 
-    <div class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-3xl py-20 lg:py-32">
-        <div>
-            <h1 class="text-4xl mb-2">Lorem ipsum dolor sit</h1>
+    <!-- <section class="w-[calc(100%_-_rem)] mx-auto max-w-lg lg:max-w-20xl xl:max-w-7xl">
+        <h2 class="text-4xl font-bold capitalize ">Je suis</h2>
+    </section> -->
+
+    <header class=" w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-xl mb-8 lg:mb-12">
+        <div class="text-center mb-5 lg:mb-8">
+        <h2 class="text-4xl mb-3 font-bold">Parcourant les mers infinies</h2>
+        <p class="text-gray-500 text-lg">Je suis...</p>
+        </div>
+    </header>
+
+    <!-- LE CHEMIN -->
+    
+    
+    <section class="relative z-[1] my-32">
+        <section class="relative z-[1]">
+            
+            <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+            <p class="text-sm text-gray-400 capitalize mb-4 lg:mb-4 flex gap-4 items-center after:content-[''] after:h-px after:grow after:bg-gray-900/10">Un chemin</p>
         
-            <p class="text-lg mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, harum.</p>
-            <i class="github"></i>
-            <i class="fi fi-brands-instagram"></i>
+            <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-12">
+                <h2 class="text-4xl text-center font-bold">Avec une histoire</h2>
+            </div>
+            <div class="grid grid-cols-12 gap-y-6 lg:gap-0">
+                <div class="col-span-12 lg:col-span-4">
+                <!-- <h2 class="font-bold text-gray-900 text-4xl leading-tight capitalize">Every champion was once a contender who refused to give up</h2> -->
+                <img src="../img/photo1.jpeg" alt="ozan">
+                </div>
+            
+                <div class="col-span-12 lg:col-span-7 lg:col-start-6">
+                    <div class="leading-relaxed">
+                        <p class="mb-6">Calme et à l'écoute, je m'impose une discipline de fer pour pouvoir atteindre mes objectifs quotidien, et me rapprocher un peu plus de mes rêves</p>
+            
+                        <p class="mb-6">Grand fan et passionné de nouvelles technologies et d'innovations high-tech, Guardia est la meilleurs trouvailles ainsi que la meilleurs opportunité de m'investir dans le milieu du numérique à grande échelle</p>
+
+                        <p class="mb-6">De nature curieuse et ambitieuse, j'aime donc découvrir de nouvelles personnes et personnalités, et aussi m'intéresser à de nouveaux projets encore plus diverses, que ce soit de l'art, avec la peinture, la musique et l'écriture, ou alors des projets d'apprentissages, avec les langues étrangères, la science, les maths et voir même la pédagogie en elle-même, en passant par des projets sportifs</p>
+
+                        <p class="mb-6">Malgré une certaine polyvalence j'aime toujours y mêler le digital et le numérique, cela élève le potentiel de chaque projet.</p>
+            
+                        <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="#0">Mon parcours →</a></p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- SECTION COMPETENCE -->
+        <section class="feature-v20 relative z-[1] py-16">
+            <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-12">
+            <h2 class="text-4xl text-center font-bold">Avec des compétence</h2>
+            </div>
         
-            <p class="text-lg mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti hic at assumenda quibusdam officiis architecto aliquam reprehenderit enim voluptates, totam animi iusto illo incidunt nemo deserunt reiciendis maiores ex. Deserunt soluta, ad facilis ipsum consectetur aspernatur assumenda numquam ea adipisci architecto magnam, itaque culpa, in debitis nam voluptate repellendus. Nam.</p>
+            <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+            <ul class="feature-v20__list grid grid-cols-12 gap-8">
+                
+                <!-- COMPETENCE 1 SECU -->
+                <li class="feature-v20__item min-w-0 col-span-12 md:col-span-6 lg:col-span-3">
+                    <figure class="relative h-[52px] w-[52px]  flex items-center justify-center mx-auto mt-0 mb-6 ">
+                        <img src="../img/ordinateur.png" alt="Sécurité informatique">
+                    </figure>
+                    <div class="text-center">
+                        <h4 class="font-bold text-2xl mb-3">Sécurité informatique</h4>
+                        <p class="text-lg text-gray-400">OS: Windows, Linux, Vm/Hyper-V</p>
+                        <p class="text-lg text-gray-400">Réseaux: Apache, NGINX, OPNsense, wireshark</p>
+                        <p class="text-lg text-gray-400">Théorie: Modèle OSI, éthique et responsabilité</p>
+                    </div>
+                </li>
+                <!-- COMPETENCE 2 PROG -->
+                <li class="feature-v20__item min-w-0 col-span-12 md:col-span-6 lg:col-span-3">
+                    <figure class="relative h-[52px] w-[52px]  flex items-center justify-center mx-auto mt-0 mb-6 ">
+                        <img src="../img/programmation.png" alt="programmation">
+                    </figure>
         
-            <p class="text-lg mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti hic at assumenda quibusdam officiis architecto aliquam reprehenderit enim voluptates, totam animi iusto illo incidunt nemo deserunt reiciendis maiores ex. Deserunt soluta, ad facilis ipsum consectetur aspernatur assumenda numquam ea adipisci architecto magnam, itaque culpa, in debitis nam voluptate repellendus. Nam.</p>
+                <div class="text-center">
+                    <h4 class="font-bold text-2xl mb-3">Programmation</h4>
+                    <p class="text-lg text-gray-400">Développement algorithmique: C, C++, Python, Arduino</p>
+                    <p class="text-lg text-gray-400">Full-stack Web: Html, Css, Js, Sql, Php</p>
+                    <p class="text-lg text-gray-400">Outils: Visual-Studio, Git, Github</p>
+                </div>
+                </li>
+                <!-- COMPETENCE 3 MANAG -->
+                <li class="feature-v20__item min-w-0 col-span-12 md:col-span-6 lg:col-span-3">
+                    <figure class="relative h-[52px] w-[52px]  flex items-center justify-center mx-auto mt-0 mb-6 ">
+                        <img src="../img/management.png" alt="management">
+                    </figure>
+                    <div class="text-center">
+                        <h4 class="font-bold text-2xl mb-3">Management</h4>
+                        <p class="text-lg text-gray-400">Gestion du temps, prise de décision, leadership, gestion des conflits, planification stratégique, communication</p>
+                        <p class="text-lg text-gray-400"></p>
+                    </div>
+                </li>
+                <!-- COMPETENCE 4 MANAG -->
+                <li class="feature-v20__item min-w-0 col-span-12 md:col-span-6 lg:col-span-3">
+                    <figure class="relative h-[52px] w-[52px]  flex items-center justify-center mx-auto mt-0 mb-6 ">
+                        <img src="../img/outils.png" alt="outils">
+                    </figure>
+                    
+                    <div class="text-center">
+                        <h4 class="font-bold text-2xl mb-3">Outils</h4>
+                        <p class="text-lg text-gray-400">Gestion d'équipe avec méthode Agile, SCRUM, Notion, Gantt, Trello/kanban</p>
+                        <p class="text-lg text-gray-400">Suite microsoft-office & suite Google</p>
+                    </div>
+                </li>
+
+            </ul>
+                
+                <div class="text-right mt-2 leading-relaxed">
+                    
+                    <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="#0">Mes compétences →</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AVEC DES PROJETS -->
+        <section class=" w-[50%] mx-auto">
+            <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-12">
+                <h2 class="text-4xl text-center font-bold">Avec des projets</h2>
+            </div>
+            <ul class="stack-cards js-stack-cards">
+                <li class=" stack-cards__item bg-white rounded-lg shadow-lg overflow-hidden js-stack-cards__item">
+                    <img src="../img/p1.jpeg" alt="Image description">
+                </li>
+                <p class="text-center mb-3 3x-l font-bold">Projet Guardia - Introduction à la cybersécurité</p>
+                <li class="stack-cards__item bg-white rounded-lg shadow-lg overflow-hidden js-stack-cards__item">
+                    <img src="../img/p2.jpeg" alt="Image description">
+                </li>
+                
+                <p class="mt-6 text-center 3x-l font-bold">Projet Guardia - Programmation en C</p>
+                <li class="stack-cards__item bg-white rounded-lg shadow-lg overflow-hidden js-stack-cards__item">
+                    <img src="../img/p3.jpeg" alt="Image description">
+                </li>
+                <p class="mt-12 text-center 3x-l font-bold">Projet Guardia - Réseaux informatiques</p>
+            </ul>
+            <div class="text-left pt-4 leading-relaxed"> 
+                <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="#0">Mes projets →</a></p>
+            </div>
+        </section>
+
+    </section>
+
+
+
+    <!-- UNE AMBITION -->
+    <section class="relative z-[1] my-32">
         
-            <p class="text-lg mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsam ut voluptas iste perferendis aperiam amet, voluptatem quis quod incidunt, hic aliquid sunt ullam cupiditate atque adipisci eos at, provident quasi earum praesentium! Expedita, illo, quis voluptatum neque facilis cum veritatis officia unde distinctio ipsum repellendus. Ea quae accusantium fuga iste nihil assumenda corporis dolorum sunt consequuntur deleniti quasi expedita a voluptate nemo vel natus qui, sint repellat reiciendis? Consequuntur ut culpa odio ad. Fugiat totam repellat harum odio ullam blanditiis iste cum, ipsam qui, inventore optio corrupti ab assumenda? Sequi eaque voluptatem dolore enim aut possimus ullam vel laboriosam nihil magnam recusandae, voluptatum molestias totam quae autem labore cupiditate reiciendis optio, eos tempora aliquam maxime hic. Maiores, hic totam? Doloribus eligendi, mollitia cupiditate quaerat harum, recusandae eveniet beatae quis est nemo rerum! Ratione, odit laboriosam soluta minus nobis vero dignissimos iste, totam animi ipsam deserunt earum blanditiis excepturi id unde asperiores atque, facilis aut nihil. Dolore nam laudantium nisi esse, aliquam dolorum beatae earum. Asperiores sapiente praesentium magni distinctio atque id amet impedit sed unde minus possimus obcaecati, repellendus, commodi facilis excepturi repudiandae nam totam similique perspiciatis eligendi, maxime corporis eius! Voluptatum non itaque harum, repellat sapiente enim sint?</p>
-        
-            <p class="text-lg mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nisi cumque error laudantium aperiam, beatae hic facere asperiores reprehenderit fugiat, illo ea. Magni, eaque? Ab, eos saepe cupiditate asperiores consequatur deleniti dolor aliquid veritatis enim magnam dolorum accusamus quos fuga iusto, unde aperiam itaque eligendi! Laboriosam deleniti expedita exercitationem quasi debitis saepe laudantium molestiae totam. Labore perferendis asperiores cupiditate consectetur excepturi dolorum nisi veritatis ratione, quas dolore explicabo molestiae dolor saepe eos id magni nemo ipsa fugit illo ab esse?</p>
-        
-            <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nisi cumque error laudantium aperiam, beatae hic facere asperiores reprehenderit fugiat, illo ea. Magni, eaque? Ab, eos saepe cupiditate asperiores consequatur deleniti dolor aliquid veritatis enim magnam dolorum accusamus quos fuga iusto, unde aperiam itaque eligendi! Laboriosam deleniti expedita exercitationem quasi debitis saepe laudantium molestiae totam. Labore perferendis asperiores cupiditate consectetur excepturi dolorum nisi veritatis ratione, quas dolore explicabo molestiae dolor saepe eos id magni nemo ipsa fugit illo ab esse?</p>
-          </div>
-    </div>
+            
+        <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+            <p class="text-sm text-gray-400 capitalize mb-4 lg:mb-4 flex gap-4 items-center after:content-[''] after:h-px after:grow after:bg-gray-900/10">Une ambition</p>
+    
+            <!-- AVEC DES VALEURS -->
+            <section class="testimonial relative z-[1] py-20 lg:py-12">
+                <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-12">
+                    <h2 class="text-4xl text-center font-bold">Avec des valeurs</h2>
+                </div>
+                <div class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-lg md:max-w-3xl">
+                    <div class="testimonial__block-wrapper mb-8 lg:mb-8">
+                        <blockquote class="text-2xl lg:text-3xl text-center leading-snug lg:leading-snug">L'ambition, c'est de partager ses rêves sans jugement, pour que le monde devienne le reflet de nos aspirations communes</blockquote>
+                        <!-- Sans jugement... -->
+                        <svg class="icon inline-block text-inherit fill-current leading-none shrink-0 w-[96px] h-[96px] text-gray-900 opacity-10" aria-hidden="true" viewBox="0 0 64 64"><polygon fill="currentColor" points="2 36 17 2 26 2 15 36 26 36 26 62 2 62 2 36"/><polygon fill="currentColor" points="38 36 53 2 62 2 51 36 62 36 62 62 38 62 38 36"/></svg>
+                    </div>
+                    <div class="text-center">
+                        <p class="uppercase letter-spacing-md leading-tight mb-4"><strong>Juste Ozan</strong></p>
+                    </div>
+                </div>
+                <div class="text-center mt-2 leading-relaxed"> 
+                    <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="#0">Mes valeurs →</a></p>
+                </div>
+            </section>
+
+            <!-- AVEC DES IDEES -->
+            <section class="testimonial relative z-[1] py-12 lg:py-12">
+                <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-2">
+                    <h2 class="text-4xl text-center font-bold">Avec des idées</h2>
+                </div>
+                <section class="relative z-[1] my-32">
+                    <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+                        <div class="grid grid-cols-12 gap-y-8 lg:gap-8 items-center">
+                            <div class="col-span-12 lg:col-span-6">
+                                <div class="flex flex-col gap-4">
+                                    <p class="text-sm text-gray-400 ">B.D.E. officiel de Guardia</p>
+                                    <h4 class="font-bold text-gray-900 text-4xl">CYNERGY</h4>
+                                    <p class="leading-normal">Suite à la présentation de mon projet, j'ai été sélectionner pour présider le tout premier bureau des étudiants de Guardia.</p>
+                                    <p class="leading-normal">Constituer d'une vingtaine de personnes, et de différents pôle, nous produisons des évènements cyber et annexes, une communication internes et externes, un merchandising, des clubs hebdomadaires et bien plus de choses encore..</p>
+                                
+                                    <div class="flex flex-wrap gap-4 items-center">
+                                        <a href="#0" class="no-underline text-indigo-700 bg-[linear-gradient(to_right,_hsl(250,84%,54%)_50%,_hsla(250,84%,54%,0.2)_50%)] bg-[length:200%_1px] bg-no-repeat bg-[100%_100%] transition-all duration-200 hover:bg-[0%_100%]">Site web</a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-span-12 lg:col-span-6">
+                                <figure>
+                                    <img class="  rounded-3xl" data-img-light src="../img/cynergy_pres.png" alt="Image description">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="relative z-[1] my-32">
+                    <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+                        <div class="grid grid-cols-12 gap-y-8 lg:gap-8 items-center">
+                            <div class="col-span-12 lg:col-span-6 lg:order-2">
+                                <div class="flex flex-col gap-4">
+                                    <p class="text-sm text-gray-400 capitalize">Associations Cybersécurité</p>
+                                    <h4 class="font-bold text-gray-900 text-4xl">ELIVACY</h4>
+                                    <p class="leading-normal">En collaboration avec des amies proches et des collègues, nous avons co-fondé, une associations spécialisé dans la cybersécurité.</p>
+                                    <p class="leading-normal">On se charges de faire de la prévention dans les écoles, dans les entreprises ou bien sur nos réseaux, en plus de cela nous effectuons une passerelle entre les étudiants et les entreprises dans la cybersécurité afin de leur garantir une sécurité de leur avenir.</p>
+                                
+                                    <div class="flex flex-wrap gap-4 items-center">
+                                    
+                                    <a href="#0" class="no-underline text-indigo-700 bg-[linear-gradient(to_right,_hsl(250,84%,54%)_50%,_hsla(250,84%,54%,0.2)_50%)] bg-[length:200%_1px] bg-no-repeat bg-[100%_100%] transition-all duration-200 hover:bg-[0%_100%]">Site web</a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-span-12 lg:col-span-6 lg:order-1">
+                                <figure>
+                                    <img class="w-full rounded-xl" data-img-light src="../img/elivacy_pres.png" alt="Image description">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="relative z-[1] my-12">
+                    <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+                        <div class="grid grid-cols-12 gap-y-8 lg:gap-8 items-center">
+                            <div class="col-span-12 lg:col-span-6">
+                                <div class="flex flex-col gap-4">
+                                    <p class="text-sm text-gray-400 ">Entreprise</p>
+                                    <h4 class="font-bold text-gray-900 text-4xl">******</h4>
+                                    <p class="leading-normal">Après mainte réflexion, j'aboutis enfin au projet le plus secret</p>
+                                    <p class="leading-normal">Je ne peux malheuresement pas en dire beaucoup plus pour des soucis de confidentialité et de stratégie marketing..</p>
+                                
+                                    <div class="flex flex-wrap gap-4 items-center">
+                                        <a href="#0" class="no-underline text-indigo-700 bg-[linear-gradient(to_right,_hsl(250,84%,54%)_50%,_hsla(250,84%,54%,0.2)_50%)] bg-[length:200%_1px] bg-no-repeat bg-[100%_100%] transition-all duration-200 hover:bg-[0%_100%]">Site web</a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-span-12 lg:col-span-6">
+                                <figure>
+                                    <img class="  rounded-3xl" data-img-light src="../img/secret_pres.png" alt="Image description">
+                                </figure>
+                            </div>
+                            <div class="text-left mt-2 leading-relaxed"> 
+                                <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="#0">Mes idées →</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+
+        </div>
+
+        <!-- AVEC UNE VISION -->
+        <section class="testimonial relative z-[1] py-12 lg:py-12">
+            <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-12">
+                <h2 class="text-4xl text-center font-bold">Avec une vision</h2>
+            </div>
+            
+            <section class="diagonal-section relative z-[1] bg-gray-100 bg-cover bg-no-repeat bg-center" style="background-image: url('../img/vision.jpeg');">
+                <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl py-44">
+            </section>
+            <p class="mt-6 drop-cap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non nisi corrupti est tempora molestias facilis ad in ea consequuntur beatae nemo, atque possimus dicta, distinctio commodi voluptate eum. Aliquam facere obcaecati assumenda quisquam accusamus, excepturi dignissimos, tempora tenetur impedit laboriosam illum pariatur iste? Enim, temporibus praesentium fuga, et, veniam voluptates illum nulla doloribus nemo mollitia excepturi ab possimus. Optio repellat aliquid, ratione sapiente et dolorem atque nostrum tenetur corrupti possimus quas quo qui mollitia incidunt dicta, vitae provident aperiam itaque.</p>
+            <div class="text-right  mt-4 leading-relaxed"> 
+                <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="#0">Ma vision →</a></p>
+            </div>
+        </section>
+    </section>
+
+
+
+    <!-- UNE RENCONTRE -->
+    <section class="relative z-[1] my-32">
+        <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+        <p class="text-sm text-gray-400 capitalize mb-4 lg:mb-4 flex gap-4 items-center after:content-[''] after:h-px after:grow after:bg-gray-900/10">Une rencontre</p>
     
 
-    <section class="mb-12 lg:mb-20">
-        <div class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-3xl">
-          <article>
-            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum odit ea aliquid reiciendis eum quo eligendi sapiente molestiae recusandae autem dolore cupiditate dicta enim illo, dolorem accusamus doloremque! Facere, nisi quam dolorum quo. Laborum, nam maiores ad sapiente quo ipsam obcaecati, consectetur alias nostrum omnis quasi repellat dolore soluta quod laboriosam error. Consequuntur nam assumenda quam eius, obcaecati culpa asperiores! Earum eos numquam laudantium amet aut possimus laborum vero dolores inventore quis laboriosam, maxime quam commodi, illo praesentium voluptates mollitia corporis dolorem nemo, suscipit. Nemo laborum eveniet in nam quidem minus deleniti ab, adipisci beatae. Recusandae amet possimus praesentium repellat consequatur ea pariatur reiciendis inventore officiis assumenda nobis voluptate, enim tempore tempora esse ex vero animi beatae cum, velit eaque. Cumque omnis nesciunt non. Cum, expedita quibusdam odit ut aspernatur perspiciatis ratione voluptates quaerat, nam consequatur vero minima ipsam omnis? Impedit esse accusantium natus veritatis doloremque aspernatur deleniti odit vel quo, sint expedita dolores, odio explicabo atque minima enim reiciendis, voluptatibus ad iste voluptas sapiente provident, optio nam eligendi consequatur! Repudiandae, quibusdam, et aspernatur perspiciatis nihil maxime aliquid eveniet sint totam sapiente voluptate, officiis ut distinctio, eius tempora fuga repellat modi dolorum.</p>
-          </article>
-        </div>
+        <!-- AVEC UN MESSAGE -->
+        <section class="testimonial relative z-[1] py-12 lg:py-12">
+            
+            <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-12">
+                <h2 class="text-4xl text-center font-bold">Avec un message</h2>
+            </div>   
+            <!-- FORM (Actuel livre d'or) -->
+            <form class="login-form" action="../action/contact.php" method="post">
+                <div class="text-center mb-3 lg:mb-5">
+                    <h4 class="text-4xl mb-2">Grâce au formulaire de contact</h4>
+                    <p class="text-lg">N'hésitez pas à m'envoyer un message, à propos de n'importe quel sujet, les coincidences n'ont pas de limites</p>
+                </div>
+                <div class="w-[42%] mx-auto">
+                    <div class="col-span-12 lg:col-span-6">
+                        <label class="inline-block text-sm mb-1.5 lg:mb-2" for="pseudo">Pseudo</label>
+                        <input class="appearance-none bg-white border border-gray-300 py-2 px-3 rounded-md text-[1em] leading-tight transition duration-200 outline-none placeholder:opacity-100 placeholder:text-gray-400 focus-within:border-orange-800 w-full" type="text" name="pseudo" id="pseudo" required>
+                    </div>
+                    <!-- <div class="mb-3 lg:mb-5">
+                        <label class="inline-block text-sm mb-1 lg:mb-1.5" for="input-email">Email</label>
+                        <input class="appearance-none bg-white border border-gray-300 py-2 px-3 rounded-md text-[1em] leading-tight transition duration-200 outline-none placeholder:opacity-100 placeholder:text-gray-400 focus-within:border-orange-800 w-full" type="email" name="input-email" id="input-email" placeholder="email@myemail.com">
+                    </div> -->
+                    <div class="col-span-12">
+                        <label class="inline-block text-sm mb-1.5 lg:mb-2" for="message">Message</label>
+                        <textarea class="appearance-none bg-white border border-gray-300 py-2 px-3 rounded-md text-[1em] leading-tight transition duration-200 outline-none placeholder:opacity-100 placeholder:text-gray-400 focus-within:border-orange-800 w-full" name="message" id="message"></textarea>
+                        <p class="mb-3 text-xs text-gray-500 mt-1.5 lg:mt-1">Utilise le coin pour rajouter des informations.</p>
+                    </div>
+                    <div class="mb-3 lg:mb-5 w-[42%] mx-auto">
+                     <button class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 w-full">Envoyer</button>
+                    </div> 
+                </div>
+                
+            </form>
+        </section>
+
+        <!-- AVEC UN SOUVENIR -->
+        <section class="testimonial relative z-[1] py-12 lg:py-12">
+            <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-12">
+                <h2 class="text-4xl text-center font-bold">Avec un souvenir</h2>
+            </div>   
+         
+            
+
+                
+            
+
+
+
+
+
+        </section>
+
     </section>
-    
-    
-    
-    
+        
+                
+
+
+
+
+                
+                
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
 
-<!-- <section id="me" class="flex flex-col justify-center items-center home-background bg-Gray 200 pb-32 pt-32 lg:pb-48 lg:pt-48"> -->
-<section id="me" class="items-center pb-32 pt-32 lg:pb-48 lg:pt-48">
-    <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold text-center wow animate__animated animate__fadeInTopLeft">Étudiant en Cybersecurité</h1>
-    <p class="text-xl md:text-2xl text-center wow animate__animated animate__fadeInRight">Développeur</p>
-</section>
-
-<!-- <section id="about" class="pt-28">
-    <div class="container">
-        <div class="flex flex-wrap -mx-4">
-            <div class="w-full px-4">
-                <div class="text-center mx-auto max-w-[610px]">
-                    <h2 class="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
-                        À propos de moi
-                    </h2>
-                    <p class="text-lg text-justify text-body-color mb-28">
-                        Je m'appelle Ozan, j'ai 22 ans et je suis étudiant en Cybersecurité
-                        dans le cadre d'un Bachelor en développement informatique sécurisé.
-                        Je propose mes services en tant que développeur freelance pour
-                        acquérir une plus ample expérience et agrandir mon portfolio...
-                    </p>
-                    <div class="flex justify-center">
-                        <img src="img/ozanb.png" class="w-48 rounded wow animate__animated animate__zoomIn" alt="Juste Ozan">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-<!-- Je vais faire trois type de compétences : reseaux (rouge), web (blue), algo (vert).  -->
-
-
-
-<!-- <section id="skills" class="pt-28">
-    <div class="container">
-        <div class="flex flex-wrap -mx-4">
-            <div class="w-full px-4">
-                <div class="mx-auto mb-12 lg:mb-20 max-w-[510px]">
-                    <h2 class="text-center font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
-                        Mes compétences
-                    </h2>
-                    <p class="text-justify text-lg text-body-color">
-                        Je maîtrise les dernières technologies pour créer des sites web performants et professionnels.
-                        Toujours à jour pour garantir un rendement optimal.
-                        Actuellement entrain d'apprendre des frameworks tels que React JS et Vue JS.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="flex flex-wrap -mx-4">
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow animate__animated animate__fadeIn">
-                <div class="change p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-2xl mb-8">
-                    <div class="w-[70px] h-[70px] flex items-center justify-center rounded-2xl mb-8">
-                        <img src="assets/images/skills/linux.png" class="w-28" alt="LINUX">
-                    </div>
-                    <h4 class="font-semibold text-xl text-dark mb-3">
-                        Linux
-                    </h4>
-                    <p class="text-body-color">
-                        Linux est un système d'exploitation souvent utilisé pour les serveurs.
-                        Il offre une stabilité, fiabilité et flexibilité
-                    </p>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow animate__animated animate__fadeIn">
-                <div class="change p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-2xl mb-8">
-                    <div class="w-[70px] h-[70px] flex items-center justify-center rounded-2xl mb-8">
-                        <img src="assets/images/skills/git.png" class="w-28" alt="Git">
-                    </div>
-                    <h4 class="font-semibold text-xl text-dark mb-3">
-                        Git
-                    </h4>
-                    <p class="text-body-color">
-                        Git est un système de versionnage distribué pour le développement
-                        facilitant le travail en collaboration et la gestion des versions
-                    </p>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow animate__animated animate__fadeIn">
-                <div class="change p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-2xl mb-8">
-                    <div class="w-[70px] h-[70px] flex items-center justify-center rounded-2xl mb-8">
-                        <img src="assets/images/skills/php.png" class="w-28" alt="PHP">
-                    </div>
-                    <h4 class="font-semibold text-xl text-dark mb-3">
-                        PHP
-                    </h4>
-                    <p class="text-body-color">
-                        PHP est un langage de programmation polyvalent pour les sites web,
-                        les applications web et d'autres utilisations
-                    </p>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow animate__animated animate__fadeIn">
-                <div class="change p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-2xl mb-8">
-                    <div class="w-[70px] h-[70px] flex items-center justify-center rounded-2xl mb-8">
-                        <img src="assets/images/skills/c.png" class="w-28" alt="C">
-                    </div>
-                    <h4 class="font-semibold text-xl text-dark mb-3">
-                        C
-                    </h4>
-                    <p class="text-body-color">
-                        C est un langage de programmation performant pour les systèmes d'exploitation
-                        et les applications, avec une syntaxe concise
-                    </p>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow animate__animated animate__fadeIn">
-                <div class="change p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-2xl mb-8">
-                    <div class="w-[70px] h-[70px] flex items-center justify-center rounded-2xl mb-8">
-                        <img src="assets/images/skills/mysql.png" class="w-28" alt="BDD">
-                    </div>
-                    <h4 class="font-semibold text-xl text-dark mb-3">
-                        MySQL
-                    </h4>
-                    <p class="text-body-color">
-                        MySQL est un système de base de données open source largement utilisé,
-                        connu pour sa fiabilité et sa facilité d'utilisation.
-                    </p>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow animate__animated animate__fadeIn">
-                <div class="change p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-2xl mb-8">
-                    <div class="w-[70px] h-[70px] flex items-center justify-center rounded-2xl mb-8">
-                        <img src="assets/images/skills/js.png" class="w-28" alt="JS">
-                    </div>
-                    <h4 class="font-semibold text-xl text-dark mb-3">
-                        JavaScript
-                    </h4>
-                    <p class="text-body-color">
-                        Le JavaScript permet de rendre le site dynamique et
-                        d'intégrer des animations ou des actions automatisées
-                    </p>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow animate__animated animate__fadeIn">
-                <div class="change p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-2xl mb-8">
-                    <div class="w-[70px] h-[70px] flex items-center justify-center rounded-2xl mb-8">
-                        <img src="assets/images/skills/html.png" class="w-28" alt="HTML">
-                    </div>
-                    <h4 class="font-semibold text-xl text-dark mb-3">
-                        HTML
-                    </h4>
-                    <p class="text-body-color">
-                        L'utilisation d'HTML permet d'imbriquer un site de façon sémantique
-                        et de le rendre optimisé pour le SEO
-                    </p>
-                </div>
-            </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow animate__animated animate__fadeIn">
-                <div class="change p-10 md:px-7 xl:px-10 rounded-[20px] bg-white shadow-md hover:shadow-2xl mb-8">
-                    <div class="w-[70px] h-[70px] flex items-center justify-center rounded-2xl mb-8">
-                        <img src="assets/images/skills/css.png" class="w-28" alt="CSS">
-                    </div>
-                    <h4 class="font-semibold text-xl text-dark mb-3">
-                        CSS
-                    </h4>
-                    <p class="text-body-color">
-                        Le CSS permet de changer l'esthétique et d'organiser un site
-                        le rendant agréable à l'oeil sur tout les appareils
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div> -->
-</section>
-
-<!-- Je rajouterai une section en plus spécialement pour la cybersécurité : 
-Try hack me 
-root me 
-ctf 
-seela 
-
-veil cyber  -->
-<!-- 
-<section id="about" class="pt-28">
-    <div class="container">
-        <div class="flex flex-wrap -mx-4">
-            <div class="w-full px-4">
-                <div class="text-center mx-auto max-w-[610px]">
-                    <h2 class="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
-                        À propos de moi
-                    </h2>
-                    <p class="text-lg text-justify text-body-color mb-28">
-                        Je m'appelle Ozan, j'ai 22 ans et je suis étudiant en Cybersecurité
-                        dans le cadre d'un Bachelor en développement informatique sécurisé.
-                        Je propose mes services en tant que développeur freelance pour
-                        acquérir une plus ample expérience et agrandir mon portfolio...
-                    </p>
-                    <div class="flex justify-center">
-                        <img src="img/ozanb.png" class="w-48 rounded wow animate__animated animate__zoomIn" alt="Juste Ozan">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-<!-- 
-<button class="change" onclick="topFunction()" id="top-button" title="top"><i class="fa-solid change fa-chevron-up"></i></button>
-<section id="contact" class="pt-28">
-    <div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center px-4 sm:pb-24">
-        <div class="flex flex-wrap -mx-4">
-            <div class="w-full px-4">
-                <div class="mx-auto mb-12 lg:mb-20 max-w-[710px]">
-                    <h2 class="text-center font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
-                        Contactez-nous dès maintenant
-                    </h2>
-                    <p class="text-center text-lg text-body-color">
-                        Une question? Un devis? Un projet? <br>N'hésitez pas à nous contacter on vous répondra dès que possible.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-            <div class="wow animate__animated animate__zoomIn absolute inset-0 pink shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-            <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
-                <div class="max-w-lg mx-auto md:px-24">
-                    <div class="divide-y divide-gray-200">
-                        <form class="pt-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7 -mb-8">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                                Nom <span class="text-red-500">*</span>
-                            </label>
-                            <input required class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Nom">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                                Email <span class="text-red-500">*</span>
-                            </label>
-                            <input required class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-emil" type="email" placeholder="Email">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">Message
-                                <span class="text-red-500">*</span>
-                            </label>
-                            <textarea required class="resize-y py-3 px-4 border focus:outline-none rounded-md w-full bg-gray-200" placeholder="Décrivez votre projet..."></textarea>
-                            <div class="flex items-end justify-end">
-                                <button class="change-form bg-blue-500 text-white font-semibold py-2 px-4 rounded">
-                                    Send
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
-<!-- <footer class="back-color">
-    <div class="flex justify-around mx-8 py-12 md:py-6">
-        <div class="flex flex-row gap-5 md:gap-5">
-            <h5 class="change-footer transform-0 hover:text-blue-500">Juste Ozan</h5>
-            <h5>Mentions légales</h5>
-            <h5>C.G.U</h5>
-        </div>
-        <div class="hidden md:flex flex-row gap-5 md:gap-16 items-center text-center">
-            <div class="flex flex-row gap-5 md:gap-16">
-                <a href="https://www.linkedin.com/in/juste-ozan" target="_blank" rel="nofollow"><i class="change-icon fab fa-linkedin-in text-lg"></i></a>
-                <a href="https://github.com/osahinGuardia" target="_blank" rel="nofollow"><i class="change-icon fab fa-github text-lg"></i></a>
-                <a href="https://www.linktr.ee/Mushow" target="_blank" rel="nofollow"><i class="change-icon fa-solid fa-tree text-lg"></i></a>
-                <a href="https://tryhackme.com/p/juste.ozan" target="_blank" rel="nofollow"><i class="change-icon fa-solid fa-cloud text-lg"></i></a>
-            </div>
-            <div class="flex flex-row gap-5 sm:gap-16">
-                </div>
-        </div>
-    </div>
-</footer> -->
-<!-- <script src="assets/js/navbar.js"></script> -->
 <script src="../JS/script.js"></script>
 <script src="assets/js/back.to.top.js"></script>
 </body>
