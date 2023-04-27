@@ -305,11 +305,8 @@ require "cfg/config.php";
 
     <!-- UNE AMBITION -->
     <section class="relative z-[1] my-32">
-        
-            
         <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
             <p class="text-sm text-gray-400 capitalize mb-4 lg:mb-4 flex gap-4 items-center after:content-[''] after:h-px after:grow after:bg-gray-900/10">Une ambition</p>
-    
             <!-- AVEC DES VALEURS -->
             <section class="testimonial relative z-[1] py-20 lg:py-12">
                 <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-12">
@@ -329,12 +326,12 @@ require "cfg/config.php";
                     <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="#0">Mes valeurs →</a></p>
                 </div>
             </section>
-
             <!-- AVEC DES IDEES -->
             <section class="testimonial relative z-[1] py-12 lg:py-12">
                 <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-2">
                     <h2 class="text-4xl text-center font-bold">Avec des idées</h2>
                 </div>
+                <!-- Cynergy -->
                 <section class="relative z-[1] my-32">
                     <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
                         <div class="grid grid-cols-12 gap-y-8 lg:gap-8 items-center">
@@ -359,6 +356,7 @@ require "cfg/config.php";
                         </div>
                     </div>
                 </section>
+                <!-- Elivacy -->
                 <section class="relative z-[1] my-32">
                     <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
                         <div class="grid grid-cols-12 gap-y-8 lg:gap-8 items-center">
@@ -384,6 +382,7 @@ require "cfg/config.php";
                         </div>
                     </div>
                 </section>
+                <!-- ??? -->
                 <section class="relative z-[1] my-12">
                     <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
                         <div class="grid grid-cols-12 gap-y-8 lg:gap-8 items-center">
@@ -412,8 +411,6 @@ require "cfg/config.php";
                     </div>
                 </section>
             </section>
-
-
         </div>
 
         <!-- AVEC UNE VISION -->
@@ -425,7 +422,7 @@ require "cfg/config.php";
             <section class="diagonal-section relative z-[1] bg-gray-100 bg-cover bg-no-repeat bg-center" style="background-image: url('img/vision.jpeg');">
                 <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl py-44">
             </section>
-            <p class="mt-6 drop-cap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non nisi corrupti est tempora molestias facilis ad in ea consequuntur beatae nemo, atque possimus dicta, distinctio commodi voluptate eum. Aliquam facere obcaecati assumenda quisquam accusamus, excepturi dignissimos, tempora tenetur impedit laboriosam illum pariatur iste? Enim, temporibus praesentium fuga, et, veniam voluptates illum nulla doloribus nemo mollitia excepturi ab possimus. Optio repellat aliquid, ratione sapiente et dolorem atque nostrum tenetur corrupti possimus quas quo qui mollitia incidunt dicta, vitae provident aperiam itaque.</p>
+            <p class="mt-6 drop-cap">Porem ipsum dolor sit amet consectetur, adipisicing elit. Non nisi corrupti est tempora molestias facilis ad in ea consequuntur beatae nemo, atque possimus dicta, distinctio commodi voluptate eum. Aliquam facere obcaecati assumenda quisquam accusamus, excepturi dignissimos, tempora tenetur impedit laboriosam illum pariatur iste? Enim, temporibus praesentium fuga, et, veniam voluptates illum nulla doloribus nemo mollitia excepturi ab possimus. Optio repellat aliquid, ratione sapiente et dolorem atque nostrum tenetur corrupti possimus quas quo qui mollitia incidunt dicta, vitae provident aperiam itaque.</p>
             <div class="text-right  mt-4 leading-relaxed"> 
                 <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="#0">Ma vision →</a></p>
             </div>
@@ -434,7 +431,7 @@ require "cfg/config.php";
 
 
 
-    <!-- UNE RENCONTRE -->
+    <!-- Une Rencontre -->
     <section class="relative z-[1] my-32">
         <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
         <p class="text-sm text-gray-400 capitalize mb-4 lg:mb-4 flex gap-4 items-center after:content-[''] after:h-px after:grow after:bg-gray-900/10">Une rencontre</p>
@@ -509,6 +506,7 @@ require "cfg/config.php";
 
     </section>
         
+    <!-- Footer -->
     <footer class="main-footer relative z-[1] pt-12 lg:pt-20">
         <div class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-7xl">
             <div class="grid grid-cols-12 gap-y-8 lg:gap-12">
