@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../dist/style.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="../img/SOI_remove.png">
-    <script src="https://cdn.tailwindcss.com%22%3E/"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>juste_ozan</title>
 </head>
 
