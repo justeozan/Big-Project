@@ -2096,6 +2096,57 @@ Usage: codyhouse.co/license
   }
 }
 
+/* --------------------------------
+
+File#: _1_main-footer
+Title: Main Footer
+Descr: Footer navigation
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.main-footer__logo {
+  display: inline-block;
+}
+
+.main-footer__logo svg, .main-footer__logo img {
+  display: block;
+}
+
+.main-footer__link {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+  text-decoration: none;
+}
+
+.main-footer__link:hover {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+  text-decoration: underline;
+}
+
+.main-footer__social {
+  text-decoration: none;
+  display: inline-block;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.main-footer__social:hover {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.main-footer__social .icon {
+  font-size: 1.2em;
+}
+
+@media (min-width: 64rem) {
+  .main-footer__social .icon {
+    font-size: 1em;
+  }
+}
+
 .placeholder\:text-gray-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
