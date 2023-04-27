@@ -37,6 +37,29 @@ sudo apt install apache2
 config : ...
 
 
+**WEB PHP**
+
+Pour l'instant seulement le formulaire de contact (provisoirement le livre d'or) est lié à une base de donnée de phpMyAdmin via Uwamp, 
+qui passera surement sur mariaDB.
+
+db_name : Big_project
+username = "root"
+
+J'initialise le php avec son fichier config.php
+et je le "require" dans chaque fichier.
+
+Dans index.php je dois faire un livre d'or donc enregistré sur ma BDD et l'afficher de nouveau, 
+Pour l'enregistré j'utilise une requête SQL : 
+    $sql = "SELECT * FROM guestbook ORDER BY id DESC LIMIT 1"; --> je met la requête SQL dans une variable
+    $pre = $pdo->prepare($sql);                                -->
+    $pre->bindParam('id', $_POST['id']);
+    $pre->execute();
+    $data = $pre->fetch(PDO::FETCH_ASSOC);
+
+
+
+
+
 
 
 
