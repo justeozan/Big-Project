@@ -1,5 +1,5 @@
 <?php 
-require "../cfg/config.php"; 
+require "cfg/config.php"; 
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +14,8 @@ require "../cfg/config.php";
     <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="assets/images/ico/favicon.png" rel="shortcut icon" type="image/png">
-    <title>Juste Ozan</title> -->
-    
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
     <!-- <script src="assets/js/wow.init.js"></script> -->
     <!-- <script src="assets/js/tailwind.init.js"></script> -->
@@ -29,9 +28,9 @@ require "../cfg/config.php";
 
     <meta charset="UTF-8">
     <meta hhtp-equiv="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="../dist/style.css">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="icon" href="../img/SOI_remove.png">
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="img/SOI_remove.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>juste_ozan</title>
 </head>
@@ -50,29 +49,24 @@ require "../cfg/config.php";
     
 ?>
 
-
-
-
-
-
 <body>
 
     <!-- NAVBAR FIX -->
     <nav>
         <div class="back-color flex flex-row justify-around items-center pb-4 pt-4" data-target-in="#sticky-banner-target">
             <div>
-                <a href="games.html"><img class="w-10" onclick="topFunction()" src="../img/SOI_remove.png" alt="SOI"></a>
+                <a href="App/games.html"><img class="w-10" onclick="topFunction()" src="img/SOI_remove.png" alt="SOI"></a>
             </div>
             <div>
                 <ul id="menubar" class="hidden md:flex flex-row gap-12 text-lg">
                     <li>
-                        <a class="hover-underline-animation" href="path.php">Chemin</a>
+                        <a class="hover-underline-animation" href="App/path.php">Chemin</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="ambition.html">Ambition</a>
+                        <a class="hover-underline-animation" href="App/404.php">Ambition</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="meeting.html">Rencontre</a>
+                        <a class="hover-underline-animation" href="App/ancien.html">Rencontre</a>
                     </li>
                 </ul>
             </div>
@@ -91,18 +85,18 @@ require "../cfg/config.php";
     <nav>
         <div class="sticky-banner bg-white shadow-md js-sticky-banner back-color flex flex-row justify-around items-center pb-4 pt-4" data-target-in="#sticky-banner-target">
             <div>
-                <a href="games.html"><img class="w-10" onclick="topFunction()" src="../img/SOI_remove.png" alt="SOI"></a>
+                <a href="games.html"><img class="w-10" onclick="topFunction()" src="img/SOI_remove.png" alt="SOI"></a>
             </div>
             <div>
                 <ul id="menubar" class="hidden md:flex flex-row gap-12 text-lg">
                     <li>
-                        <a class="hover-underline-animation" href="path.php">Chemin</a>
+                        <a class="hover-underline-animation" href="App/path.php">Chemin</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="ambition.html">Ambition</a>
+                        <a class="hover-underline-animation" href="App/ambition.html">Ambition</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="meeting.html">Rencontre</a>
+                        <a class="hover-underline-animation" href="App/meeting.html">Rencontre</a>
                     </li>
                 </ul>
             </div>
@@ -122,7 +116,7 @@ require "../cfg/config.php";
     <section class="sticky-hero mb-12 lg:mb-20 js-sticky-hero" id="sticky-banner-target">
         <div class="sticky-hero__media parallax overflow-hidden  js-parallax" aria-hidden="true">
             <figure class="parallax__wrapper relative transition-transform duration-[400ms] ease-out js-parallax__wrapper">
-            <img class="block w-full  js-parallax__item" src="../img/ozanmid.jpg" alt="Image description">
+            <img class=" block w-full  js-parallax__item" src="img/ozanmid.jpg" alt="Image description">
 
             </figure>
         </div>
@@ -133,9 +127,9 @@ require "../cfg/config.php";
                 
                 <p class="mb-12 text-xl md:text-2xl lg:text-5xl text-white text-right font-serif">Juste Ozan</p>
                 <section class="pt-32">
-                    <a href="https://www.instagram.com/juste_ozan/"><img class="h-10 mb-3 text-xl md:text-2xl lg:text-4xl" src="../img/instagram.png" alt="instagram"></a>
-                    <a href="https://www.linkedin.com/in/juste-ozan/"><img  class="h-10 mb-3 text-xl md:text-2xl lg:text-4xl" src="../img/linkedin.png" alt="linkedin"></a>
-                    <a href="https://github.com/osahinGuardia"><img class="h-10 mb-3 text-xl md:text-2xl lg:text-4xl" src="../img/github.png" alt="github"></a>
+                    <a href="https://www.instagram.com/juste_ozan/"><img class="h-10 mb-3 text-xl md:text-2xl lg:text-4xl" src="img/instagram.png" alt="instagram"></a>
+                    <a href="https://www.linkedin.com/in/juste-ozan/"><img  class="h-10 mb-3 text-xl md:text-2xl lg:text-4xl" src="img/linkedin.png" alt="linkedin"></a>
+                    <a href="https://github.com/osahinGuardia"><img class="h-10 mb-3 text-xl md:text-2xl lg:text-4xl" src="img/github.png" alt="github"></a>
                 </section>
                 
 
@@ -173,7 +167,7 @@ require "../cfg/config.php";
             <div class="grid grid-cols-12 gap-y-6 lg:gap-0">
                 <div class="col-span-12 lg:col-span-4">
                 <!-- <h2 class="font-bold text-gray-900 text-4xl leading-tight capitalize">Every champion was once a contender who refused to give up</h2> -->
-                <img src="../img/photo1.jpeg" alt="ozan">
+                <img src="img/photo1.jpeg" alt="ozan">
                 </div>
             
                 <div class="col-span-12 lg:col-span-7 lg:col-start-6">
@@ -186,7 +180,7 @@ require "../cfg/config.php";
 
                         <p class="mb-6">Malgré une certaine polyvalence j'aime toujours y mêler le digital et le numérique, cela élève le potentiel de chaque projet.</p>
             
-                        <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="#0">Mon parcours →</a></p>
+                        <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="App/404.php">Mon parcours →</a></p>
                     </div>
                 </div>
             </div>
@@ -205,7 +199,7 @@ require "../cfg/config.php";
                 <!-- COMPETENCE 1 SECU -->
                 <li class="feature-v20__item min-w-0 col-span-12 md:col-span-6 lg:col-span-3">
                     <figure class="relative h-[52px] w-[52px]  flex items-center justify-center mx-auto mt-0 mb-6 ">
-                        <img src="../img/ordinateur.png" alt="Sécurité informatique">
+                        <img src="img/ordinateur.png" alt="Sécurité informatique">
                     </figure>
                     <div class="text-center">
                         <h4 class="font-bold text-2xl mb-3">Sécurité informatique</h4>
@@ -217,7 +211,7 @@ require "../cfg/config.php";
                 <!-- COMPETENCE 2 PROG -->
                 <li class="feature-v20__item min-w-0 col-span-12 md:col-span-6 lg:col-span-3">
                     <figure class="relative h-[52px] w-[52px]  flex items-center justify-center mx-auto mt-0 mb-6 ">
-                        <img src="../img/programmation.png" alt="programmation">
+                        <img src="img/programmation.png" alt="programmation">
                     </figure>
         
                 <div class="text-center">
@@ -230,7 +224,7 @@ require "../cfg/config.php";
                 <!-- COMPETENCE 3 MANAG -->
                 <li class="feature-v20__item min-w-0 col-span-12 md:col-span-6 lg:col-span-3">
                     <figure class="relative h-[52px] w-[52px]  flex items-center justify-center mx-auto mt-0 mb-6 ">
-                        <img src="../img/management.png" alt="management">
+                        <img src="img/management.png" alt="management">
                     </figure>
                     <div class="text-center">
                         <h4 class="font-bold text-2xl mb-3">Management</h4>
@@ -241,7 +235,7 @@ require "../cfg/config.php";
                 <!-- COMPETENCE 4 MANAG -->
                 <li class="feature-v20__item min-w-0 col-span-12 md:col-span-6 lg:col-span-3">
                     <figure class="relative h-[52px] w-[52px]  flex items-center justify-center mx-auto mt-0 mb-6 ">
-                        <img src="../img/outils.png" alt="outils">
+                        <img src="img/outils.png" alt="outils">
                     </figure>
                     
                     <div class="text-center">
@@ -267,16 +261,16 @@ require "../cfg/config.php";
             </div>
             <ul class="stack-cards js-stack-cards">
                 <li class=" stack-cards__item bg-white rounded-lg shadow-lg overflow-hidden js-stack-cards__item">
-                    <img src="../img/p1.jpeg" alt="Image description">
+                    <img src="img/p1.jpeg" alt="Image description">
                 </li>
                 <p class="text-center mb-3 3x-l font-bold">Projet Guardia - Introduction à la cybersécurité</p>
                 <li class="stack-cards__item bg-white rounded-lg shadow-lg overflow-hidden js-stack-cards__item">
-                    <img src="../img/p2.jpeg" alt="Image description">
+                    <img src="img/p2.jpeg" alt="Image description">
                 </li>
                 
                 <p class="mt-6 text-center 3x-l font-bold">Projet Guardia - Programmation en C</p>
                 <li class="stack-cards__item bg-white rounded-lg shadow-lg overflow-hidden js-stack-cards__item">
-                    <img src="../img/p3.jpeg" alt="Image description">
+                    <img src="img/p3.jpeg" alt="Image description">
                 </li>
                 <p class="mt-12 text-center 3x-l font-bold">Projet Guardia - Réseaux informatiques</p>
             </ul>
@@ -339,7 +333,7 @@ require "../cfg/config.php";
                         
                             <div class="col-span-12 lg:col-span-6">
                                 <figure>
-                                    <img class="  rounded-3xl" data-img-light src="../img/cynergy_pres.png" alt="Image description">
+                                    <img class="  rounded-3xl" data-img-light src="img/cynergy_pres.png" alt="Image description">
                                 </figure>
                             </div>
                         </div>
@@ -364,7 +358,7 @@ require "../cfg/config.php";
                         
                             <div class="col-span-12 lg:col-span-6 lg:order-1">
                                 <figure>
-                                    <img class="w-full rounded-xl" data-img-light src="../img/elivacy_pres.png" alt="Image description">
+                                    <img class="w-full rounded-xl" data-img-light src="img/elivacy_pres.png" alt="Image description">
                                 </figure>
                             </div>
                         </div>
@@ -388,7 +382,7 @@ require "../cfg/config.php";
                         
                             <div class="col-span-12 lg:col-span-6">
                                 <figure>
-                                    <img class="  rounded-3xl" data-img-light src="../img/secret_pres.png" alt="Image description">
+                                    <img class="  rounded-3xl" data-img-light src="img/secret_pres.png" alt="Image description">
                                 </figure>
                             </div>
                             <div class="text-left mt-2 leading-relaxed"> 
@@ -408,7 +402,7 @@ require "../cfg/config.php";
                 <h2 class="text-4xl text-center font-bold">Avec une vision</h2>
             </div>
             
-            <section class="diagonal-section relative z-[1] bg-gray-100 bg-cover bg-no-repeat bg-center" style="background-image: url('../img/vision.jpeg');">
+            <section class="diagonal-section relative z-[1] bg-gray-100 bg-cover bg-no-repeat bg-center" style="background-image: url('img/vision.jpeg');">
                 <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl py-44">
             </section>
             <p class="mt-6 drop-cap">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non nisi corrupti est tempora molestias facilis ad in ea consequuntur beatae nemo, atque possimus dicta, distinctio commodi voluptate eum. Aliquam facere obcaecati assumenda quisquam accusamus, excepturi dignissimos, tempora tenetur impedit laboriosam illum pariatur iste? Enim, temporibus praesentium fuga, et, veniam voluptates illum nulla doloribus nemo mollitia excepturi ab possimus. Optio repellat aliquid, ratione sapiente et dolorem atque nostrum tenetur corrupti possimus quas quo qui mollitia incidunt dicta, vitae provident aperiam itaque.</p>
@@ -499,7 +493,7 @@ require "../cfg/config.php";
         <div class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-7xl">
             <div class="grid grid-cols-12 gap-y-8 lg:gap-12">
                 <div class="col-span-12 xl:col-span-3 xl:order-2 xl:text-right">
-                    <a href="games.html"><img class="w-20" onclick="topFunction()" src="../img/SOI_remove.png" alt="SOI"></a>
+                    <a href="games.html"><img class="w-20" onclick="topFunction()" src="img/SOI_remove.png" alt="SOI"></a>
                 </div>
             
                 <nav class="col-span-12 xl:col-span-9 xl:order-1">

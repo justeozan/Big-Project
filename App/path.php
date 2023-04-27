@@ -23,7 +23,7 @@
             <div>
                 <ul id="menubar" class="hidden md:flex flex-row gap-12 text-lg">
                     <li>
-                        <a class="hover-underline-animation" href="index.php">Accueil</a>
+                        <a class="hover-underline-animation" href="../index.php">Accueil</a>
                     </li>
                     <li>
                         <a class="hover-underline-animation" href="index.php">Ambition</a>
