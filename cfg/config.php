@@ -1,12 +1,14 @@
 <?php
-  $DB_host = "localhost";
-  $DB_username = "root";
-  $DB_password = "root";
-  $DB_name = "big_project";
+
+  $host = "localhost";
+  $dbname = "big_project";
+  $username = "root";
+  $password = "root";
+  
 
 
 
-  $pdo = new PDO("mysql:host=$DB_host;dbname=$DB_name", $DB_username, $DB_password,array(
+  $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password,array(
       PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
     )
   );
