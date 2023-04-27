@@ -580,8 +580,20 @@ video {
   bottom: 2rem;
 }
 
+.left-0 {
+  left: 0px;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
 .right-8 {
   right: 2rem;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .z-10 {
@@ -723,10 +735,6 @@ video {
 
 .inline-flex {
   display: inline-flex;
-}
-
-.table {
-  display: table;
 }
 
 .grid {
@@ -1069,6 +1077,11 @@ video {
   background-color: rgb(64 64 64 / var(--tw-bg-opacity));
 }
 
+.bg-orange-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(154 52 18 / var(--tw-bg-opacity));
+}
+
 .bg-red-600\/20 {
   background-color: rgb(220 38 38 / 0.2);
 }
@@ -1080,11 +1093,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-orange-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(154 52 18 / var(--tw-bg-opacity));
 }
 
 .bg-\[linear-gradient\(to_right\2c _hsl\(250\2c 84\%\2c 54\%\)_50\%\2c _hsla\(250\2c 84\%\2c 54\%\2c 0\.2\)_50\%\)\] {
@@ -2662,3 +2670,4 @@ Usage: codyhouse.co/license
 .\[\&\.parallax--loaded\]\:opacity-100.parallax--loaded {
   opacity: 1;
 }
+

@@ -26,13 +26,13 @@ require "../cfg/config.php";
             <div>
                 <ul id="menubar" class="hidden md:flex flex-row gap-12 text-lg">
                     <li>
-                        <a class="hover-underline-animation" href="index.php">Accueil</a>
+                        <a class="hover-underline-animation" href="../index.php">Accueil</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="index.php">Ambition</a>
+                        <a class="hover-underline-animation" href="../index.php">Ambition</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="index.php">Rencontre</a>
+                        <a class="hover-underline-animation" href="../index.php">Rencontre</a>
                     </li>
                     
                 </ul>
@@ -54,7 +54,7 @@ require "../cfg/config.php";
             <div class="text-center mb-12">
                 <h1 class="text-4xl mb-6"><strong>Error 404: Page non trouvé</strong></h1>
                 <p class="mb-4">Désolé, mais la page est soit en construction, soit une mauvaise redirection, soyez patient</p>
-                <p><a href="index.php" class="text-orange-800 no-underline bg-[linear-gradient(to_right,_#9a3412_50%,_hsla(15_79%_34%/0.2)_50%)] bg-[length:200%_1px] bg-no-repeat bg-[position:100%_100%] transition-all duration-200 hover:bg-[position:0%_100%]">Aller à la page d'acueil</a></p>
+                <p><a href="../index.php" class="text-orange-800 no-underline bg-[linear-gradient(to_right,_#9a3412_50%,_hsla(15_79%_34%/0.2)_50%)] bg-[length:200%_1px] bg-no-repeat bg-[position:100%_100%] transition-all duration-200 hover:bg-[position:0%_100%]">Aller à la page d'acueil</a></p>
             </div>
 
             <div aria-label="404 animation">
