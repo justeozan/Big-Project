@@ -39,7 +39,7 @@ config : ...
 
 **FRAMEWORK CSS**
 
-J'utilise pour ce site : Tailwind.
+J'utilise pour ce site : Tailwind
 Pour l'intégré rien de plus simple, il suffit de rajouter cette ligne d'intégration dans le HEAD :
 ------
     <script src="https://cdn.tailwindcss.com"></script>
@@ -82,7 +82,7 @@ et, sur une autre balise "input" on va utiliser "" name="message" id="message" "
 
 Pour afficher ce qu'il y a de ma bdd, à l'endroie où je voulais afficher le message je met le code php suivant : "" <?php echo $message ?> ""; idem pour le pseudo : "" <?php echo $pseudo ?> "" dans mon cas ce sont entre des balise <p>
 
-s
+
   
  
 
