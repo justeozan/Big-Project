@@ -8,8 +8,7 @@ require "cfg/config.php";
     <!-- Title-Description | Charset-->
     <title>juste_ozan</title>
     <meta charset="UTF-8">
-    <meta name="description" content="
-        Etudiant en cybersécurité, en recherche d'innovation et ...">
+    <!-- <meta name="description" content="Etudiant en cybersécurité, en recherche d'innovation et ..."> -->
     <!-- Let browser know website is optimized for mobile -->
     <meta hhtp-equiv="viewport" content="width=device-width,initial-scale=1.0">
     <!-- Importation animation -->
@@ -99,7 +98,7 @@ require "cfg/config.php";
             </div>
         </div>
     </nav> -->
-<!-- MODE 3D -->
+    <!-- MODE 3D -->
     <!-- <section class="sticky-hero mb-12 lg:mb-20 js-sticky-hero" id="sticky-bannder-target"> -->
 
 
@@ -151,7 +150,7 @@ require "cfg/config.php";
     <!-- <section class="w-[calc(100%_-_rem)] mx-auto max-w-lg lg:max-w-20xl xl:max-w-7xl">
         <h2 class="text-4xl font-bold capitalize ">Je suis</h2>
     </section> -->
-<!-- FIN MODE 3D -->
+    <!-- FIN MODE 3D -->
     <!-- Intro -->
     <header class="pt-12 w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-xl mb-8 lg:mb-12">  
         <div class="text-center mb-5 lg:mb-8">
@@ -172,7 +171,7 @@ require "cfg/config.php";
             <div class="grid grid-cols-12 gap-y-6 lg:gap-0">
                 <div class="col-span-12 lg:col-span-4">
                 <!-- <h2 class="font-bold text-gray-900 text-4xl leading-tight capitalize">Every champion was once a contender who refused to give up</h2> -->
-                <img src="img/photo1.jpeg" alt="ozan">
+                    <img src="img/photo1.jpeg" alt="ozan">
                 </div>
             
                 <div class="col-span-12 lg:col-span-7 lg:col-start-6">
@@ -272,7 +271,6 @@ require "cfg/config.php";
                 <li class="stack-cards__item bg-white rounded-lg shadow-lg overflow-hidden js-stack-cards__item">
                     <img src="img/p2.jpeg" alt="Image description">
                 </li>
-                
                 <p class="mt-6 text-center 3x-l font-bold">Projet Guardia - Programmation en C</p>
                 <li class="stack-cards__item bg-white rounded-lg shadow-lg overflow-hidden js-stack-cards__item">
                     <img src="img/p3.jpeg" alt="Image description">
@@ -283,7 +281,6 @@ require "cfg/config.php";
                 <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="path.php">Mes projets →</a></p>
             </div>
         </section>
-
     </section>
     <!-- Une ambition -->
     <section class="relative z-[1] my-32">
@@ -297,7 +294,6 @@ require "cfg/config.php";
                 <div class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-lg md:max-w-3xl">
                     <div class="testimonial__block-wrapper mb-8 lg:mb-8">
                         <blockquote class="text-2xl lg:text-3xl text-center leading-snug lg:leading-snug">L'ambition, c'est de partager ses rêves sans jugement, pour que le monde devienne le reflet de nos aspirations communes</blockquote>
-                        <!-- Sans jugement... -->
                         <svg class="icon inline-block text-inherit fill-current leading-none shrink-0 w-[96px] h-[96px] text-gray-900 opacity-10" aria-hidden="true" viewBox="0 0 64 64"><polygon fill="currentColor" points="2 36 17 2 26 2 15 36 26 36 26 62 2 62 2 36"/><polygon fill="currentColor" points="38 36 53 2 62 2 51 36 62 36 62 62 38 62 38 36"/></svg>
                     </div>
                     <div class="text-center">
@@ -443,10 +439,9 @@ require "cfg/config.php";
                         <p class="mb-3 text-xs text-gray-500 mt-1.5 lg:mt-1">Utilise le coin pour rajouter des informations.</p>
                     </div>
                     <div class="mb-3 lg:mb-5 w-[42%] mx-auto">
-                     <button class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 w-full">Envoyer</button>
+                        <button class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 w-full">Envoyer</button>
                     </div> 
                 </div>
-                
             </form>
         </section>
 
@@ -456,7 +451,7 @@ require "cfg/config.php";
                 <h2 class="text-4xl text-center font-bold">Avec un souvenir</h2>
             </div>   
          
-            <!-- CAROUSEL -->
+            <!-- message / bientôt Fade en JS -->
             <blockquote class="fw-blockquote py-28 relative z-[1] bg-gray-100 text-center">
                 <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl">
                     <svg class="h-24 w-24 inline-block text-gray-400 fill-current leading-none shrink-0 max-w-[initial]" aria-hidden="true" viewBox="0 0 64 64">
@@ -471,16 +466,6 @@ require "cfg/config.php";
                     <footer class="text-gray-500 mt-12">&mdash; <?php echo $pseudo ?></footer>
                 </div>
             </blockquote>
-            
-            
-
-                
-            
-
-
-
-
-
         </section>
 
     </section>
