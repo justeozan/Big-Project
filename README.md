@@ -10,8 +10,8 @@ l’année, afin de créer une seule infrastructure complète.
 
 **SERVER**
 
-Installation d'ubuntu server : vers.
-Link : 
+Installation debian server : vers. 11.6.0
+Link : /
 type : iso
 
 Virtualiseur : Virtual box 7.0
@@ -34,7 +34,7 @@ Choix : Apache2
 installation en ligne de commande : 
 sudo apt install apache2 
 
-config : ...
+config : /etc/apache2/apache2.conf ; /etc/apache2/sites-availables/000-default.conf ; /etc/apache2/sites-enabled/000-default.conf ; 
 
 
 **FRAMEWORK CSS**
