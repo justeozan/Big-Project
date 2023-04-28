@@ -5,36 +5,28 @@ require "cfg/config.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title-Description | Charset-->
+    <title>juste_ozan</title>
+    <meta charset="UTF-8">
     <meta name="description" content="
         Etudiant en cybersécurité, en recherche d'innovation et ...">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="dist/style.css">
-    <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css">
+    <!-- Let browser know website is optimized for mobile -->
+    <meta hhtp-equiv="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Importation animation -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="assets/images/ico/favicon.png" rel="shortcut icon" type="image/png">
-
-    <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="/your-path-to-uicons/css/uicons-rounded-solid.css" rel="stylesheet">
+    <!-- IMPORTATION TAILWIND -->
+    <link rel="stylesheet" href="../dist/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" href="../img/SOI_remove.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css"> -->
+    <!-- <link href="assets/images/ico/favicon.png" rel="shortcut icon" type="image/png"> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
     <!-- <script src="assets/js/wow.init.js"></script> -->
     <!-- <script src="assets/js/tailwind.init.js"></script> -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
-    <link href="/your-path-to-uicons/css/uicons-rounded-solid.css" rel="stylesheet">
-
-    <!-- <script src="https://kit.fontawesome.com/b23fafd417.js"></script> -->
-
-    <meta charset="UTF-8">
-    <meta hhtp-equiv="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="dist/style.css">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="icon" href="img/SOI_remove.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>juste_ozan</title>
+    <!-- <script src="https://kit.fontawesome.com/b23fafd417.js"></script> -->    
 </head>
-
 <!-- RECUP DONNEE + VARIABLE -->
 <?php
     $sql = "SELECT * FROM guestbook ORDER BY id DESC LIMIT 1";
@@ -42,15 +34,13 @@ require "cfg/config.php";
     $pre->bindParam('id', $_POST['id']);
     $pre->execute();
     $data = $pre->fetch(PDO::FETCH_ASSOC);
-
+    // ----
     $id = "#".$data["id"];
     $pseudo = $data["pseudo"];
     $message = $data['message'];
-    
 ?>
-
+<!-- // -->
 <body>
-
     <!-- NAVBAR FIX -->
     <nav>
         <div class="back-color flex flex-row justify-around items-center pb-4 pt-4" data-target-in="#sticky-banner-target">
@@ -66,7 +56,7 @@ require "cfg/config.php";
                         <a class="hover-underline-animation" href="App/404.php">Ambition</a>
                     </li>
                     <li>
-                        <a class="hover-underline-animation" href="App/ancien.html">Rencontre</a>
+                        <a class="hover-underline-animation" href="App/404.php">Rencontre</a>
                     </li>
                 </ul>
             </div>
@@ -80,9 +70,8 @@ require "cfg/config.php";
             </div>
         </div>
     </nav>
-
     <!-- NAVBAR NINJA -->
-    <nav>
+    <!-- <nav>
         <div class="sticky-banner bg-white shadow-md js-sticky-banner back-color flex flex-row justify-around items-center pb-4 pt-4" data-target-in="#sticky-banner-target">
             <div>
                 <a href="games.html"><img class="w-10" onclick="topFunction()" src="img/SOI_remove.png" alt="SOI"></a>
@@ -109,11 +98,9 @@ require "cfg/config.php";
                 </button>
             </div>
         </div>
-    </nav>
-
-
-    <!-- MODE 3D -->
-    <!-- <section class="sticky-hero mb-12 lg:mb-20 js-sticky-hero" id="sticky-banner-target"> -->
+    </nav> -->
+<!-- MODE 3D -->
+    <!-- <section class="sticky-hero mb-12 lg:mb-20 js-sticky-hero" id="sticky-bannder-target"> -->
 
 
     <!-- 1. Faut mettre l'image ici -->
@@ -164,17 +151,15 @@ require "cfg/config.php";
     <!-- <section class="w-[calc(100%_-_rem)] mx-auto max-w-lg lg:max-w-20xl xl:max-w-7xl">
         <h2 class="text-4xl font-bold capitalize ">Je suis</h2>
     </section> -->
-
-    <header class=" w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-xl mb-8 lg:mb-12">
+<!-- FIN MODE 3D -->
+    <!-- Intro -->
+    <header class="pt-12 w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-xl mb-8 lg:mb-12">  
         <div class="text-center mb-5 lg:mb-8">
-        <h2 class="text-4xl mb-3 font-bold">Parcourant les mers infinies</h2>
-        <p class="text-gray-500 text-lg">Je suis...</p>
+            <h2 class="text-4xl mb-3 font-bold">Parcourant les mers infinies</h2>
+            <p class="text-gray-500 text-lg">Je suis...</p>
         </div>
     </header>
-
-    <!-- LE CHEMIN -->
-    
-    <!-- AVEC UN PARCOUR -->
+    <!-- Un chemin -->
     <section class="relative z-[1] my-32">
         <section class="relative z-[1]">
             
@@ -300,10 +285,7 @@ require "cfg/config.php";
         </section>
 
     </section>
-
-
-
-    <!-- UNE AMBITION -->
+    <!-- Une ambition -->
     <section class="relative z-[1] my-32">
         <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
             <p class="text-sm text-gray-400 capitalize mb-4 lg:mb-4 flex gap-4 items-center after:content-[''] after:h-px after:grow after:bg-gray-900/10">Une ambition</p>
@@ -422,22 +404,19 @@ require "cfg/config.php";
             <section class="diagonal-section relative z-[1] bg-gray-100 bg-cover bg-no-repeat bg-center" style="background-image: url('img/vision.jpeg');">
                 <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl py-44">
             </section>
-            <p class="mt-6 drop-cap">Porem ipsum dolor sit amet consectetur, adipisicing elit. Non nisi corrupti est tempora molestias facilis ad in ea consequuntur beatae nemo, atque possimus dicta, distinctio commodi voluptate eum. Aliquam facere obcaecati assumenda quisquam accusamus, excepturi dignissimos, tempora tenetur impedit laboriosam illum pariatur iste? Enim, temporibus praesentium fuga, et, veniam voluptates illum nulla doloribus nemo mollitia excepturi ab possimus. Optio repellat aliquid, ratione sapiente et dolorem atque nostrum tenetur corrupti possimus quas quo qui mollitia incidunt dicta, vitae provident aperiam itaque.</p>
+            <p class="mt-6 mx-20 drop-cap ">Je suis convaincu que l'avenir est rempli de possibilités infinies. Nous avons la chance de vivre à une époque passionnante où les technologies émergentes et les idées novatrices sont en train de changer la façon dont nous vivons, travaillons et interagissons avec le monde. Je suis motivé par la perspective de contribuer à façonner l'avenir en créant des solutions innovantes et en prenant des risques calculés pour réaliser mes rêves. Je crois que les jeunes étudiants ont un rôle important à jouer dans la construction d'un avenir meilleur pour tous, car nous apportons une perspective unique et un regard neuf sur les défis auxquels nous sommes confrontés.</p>
             <div class="text-right  mt-4 leading-relaxed"> 
-                <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="#0">Ma vision →</a></p>
+                <p><a class="mr-12 bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="#0">Ma vision →</a></p>
             </div>
         </section>
     </section>
-
-
-
     <!-- Une Rencontre -->
     <section class="relative z-[1] my-32">
         <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
         <p class="text-sm text-gray-400 capitalize mb-4 lg:mb-4 flex gap-4 items-center after:content-[''] after:h-px after:grow after:bg-gray-900/10">Une rencontre</p>
     
 
-        <!-- AVEC UN MESSAGE -->
+        <!-- Avec un message -->
         <section class="testimonial relative z-[1] py-12 lg:py-12">
             
             <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-12">
@@ -471,7 +450,7 @@ require "cfg/config.php";
             </form>
         </section>
 
-        <!-- AVEC UN SOUVENIR -->
+        <!-- Avec un souvenir -->
         <section class="testimonial relative z-[1] py-12 lg:py-12">
             <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-12">
                 <h2 class="text-4xl text-center font-bold">Avec un souvenir</h2>
@@ -505,7 +484,6 @@ require "cfg/config.php";
         </section>
 
     </section>
-        
     <!-- Footer -->
     <footer class="main-footer relative z-[1] pt-12 lg:pt-20">
         <div class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-7xl">
@@ -573,15 +551,7 @@ require "cfg/config.php";
             </div>
         </div>
     </footer>
-
 </body>
-
-
-
-
-
-
 <script src="../JS/script.js"></script>
 <script src="assets/js/back.to.top.js"></script>
-
 </html>
