@@ -47,7 +47,7 @@
     
 
 
-    <header class=" w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-xl mb-8 lg:mb-12">
+    <header class="w-[calc(100%_-_2.5rem)] lg:w-[calc(100%_-_4rem)] mx-auto max-w-xl mb-8 lg:mb-12">
         <div class="text-center mb-5 lg:mb-8">
             <h2 class="text-4xl mb-3 font-bold">Voici mon chemin</h2>
             <p class="text-gray-500 text-lg">juste ozan</p>
@@ -155,7 +155,7 @@
         <div class="w-[calc(100%_-_3rem)] mx-auto max-w-3xl mb-12">
             <h2 class="text-4xl text-center font-bold">Avec des projets</h2>
         </div>
-        <div class="w-[calc(100%_-_3rem)] mx-auto max-w-lg lg:max-w-5xl xl:max-w-7xl">
+        <div class="w-[calc(100%_-_3rem)] ">
             <div class="mx-16 lg:mx-28 xl:mx-52 grid grid-cols-12 gap-3 md:gap-16 rounded-lg">
                 <!-- PROJET1 -->
                 <div class="rounded-3xl col-span-12 sm:col-span-6 lg:col-span-4">

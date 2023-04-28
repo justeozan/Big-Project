@@ -9,7 +9,7 @@ require "../cfg/config.php";
             $pre->bindParam("message", htmlspecialchars($_POST['message']));
             $pre->execute();
 
-            header('Location:../App/index.php');
+            header('Location:../index.php#');
         // if (isset($_POST['pseudo'])) {
 
         //     $to = "osahin@guardiaschool.fr";

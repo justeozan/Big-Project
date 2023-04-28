@@ -6,8 +6,9 @@ require "cfg/config.php";
 <html lang="fr">
 <head>
     <!-- Title-Description | Charset-->
-    <title>juste_ozan</title>
+    
     <meta charset="UTF-8">
+    <title>juste_ozan</title>
     <!-- <meta name="description" content="Etudiant en cybersécurité, en recherche d'innovation et ..."> -->
     <!-- Let browser know website is optimized for mobile -->
     <meta hhtp-equiv="viewport" content="width=device-width,initial-scale=1.0">
@@ -15,9 +16,9 @@ require "cfg/config.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="/your-path-to-uicons/css/uicons-rounded-solid.css" rel="stylesheet">
     <!-- IMPORTATION TAILWIND -->
-    <link rel="stylesheet" href="../dist/style.css">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="icon" href="../img/SOI_remove.png">
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="img/SOI_remove.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css"> -->
     <!-- <link href="assets/images/ico/favicon.png" rel="shortcut icon" type="image/png"> -->
@@ -419,7 +420,7 @@ require "cfg/config.php";
                 <h2 class="text-4xl text-center font-bold">Avec un message</h2>
             </div>   
             <!-- FORM (Actuel livre d'or) -->
-            <form class="login-form" action="../action/contact.php" method="post">
+            <form class="login-form" action="action/contact.php" method="post">
                 <div class="text-center mb-3 lg:mb-5">
                     <h4 class="text-4xl mb-2">Grâce au formulaire de contact</h4>
                     <p class="text-lg">N'hésitez pas à m'envoyer un message, à propos de n'importe quel sujet, les coincidences n'ont pas de limites</p>
@@ -439,7 +440,7 @@ require "cfg/config.php";
                         <p class="mb-3 text-xs text-gray-500 mt-1.5 lg:mt-1">Utilise le coin pour rajouter des informations.</p>
                     </div>
                     <div class="mb-3 lg:mb-5 w-[42%] mx-auto">
-                        <button class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 w-full">Envoyer</button>
+                        <button type="submit" class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 w-full">Envoyer</button>
                     </div> 
                 </div>
             </form>
