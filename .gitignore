@@ -1,2 +1,4 @@
 #ignore le fichier config.php
 cfg/
+
+.gitignore
