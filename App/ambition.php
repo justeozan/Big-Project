@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="
-          Etudiant en cybersécurité, en recherche d'innovation et ...">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="dist/style.css">
-    <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="assets/images/ico/favicon.png" rel="shortcut icon" type="image/png">
-    <title>Juste Ozan</title> -->
-    
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script> -->
-    <!-- <script src="assets/js/wow.init.js"></script> -->
-    <!-- <script src="assets/js/tailwind.init.js"></script> -->
+   
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
