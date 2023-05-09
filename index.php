@@ -270,7 +270,7 @@ require "cfg/config.php";
                 </li>
                 <p class="text-center mb-3 3x-l font-bold">Projet Guardia - Introduction à la cybersécurité</p>
                 <li class="stack-cards__item bg-white rounded-lg shadow-lg overflow-hidden js-stack-cards__item">
-                    <img src="img/p2.jpeg" alt="Image description">
+                    <img src="img/p4.jpeg" alt="Image description">
                 </li>
                 <p class="mt-6 text-center 3x-l font-bold">Projet Guardia - Programmation en C</p>
                 <li class="stack-cards__item bg-white rounded-lg shadow-lg overflow-hidden js-stack-cards__item">
@@ -286,23 +286,26 @@ require "cfg/config.php";
     <section class="adv-gallery relative z-[1] py-16">
         <div class="grid gap-8 w-[calc(100%_-_3rem)] max-w-7xl mx-auto lg:grid-cols-12 xl:gap-6 xl:grid-rows-[repeat(12,_50px)]">
             <div class="lg:col-span-5 xl:col-[1/4] xl:row-[1/7]">
-                <img class="adv-gallery__img w-full block object-cover xl:h-full" src="img/adv-gallery-img-1.jpg" alt="Image description">
+                <img class="adv-gallery__img w-full block object-cover xl:h-full" src="img/p1.jpeg" alt="Image description">
             </div>
 
             <div class="lg:col-span-7 xl:col-[1/4] xl:row-[7/-1]">
-                <img class="adv-gallery__img w-full block object-cover xl:h-full" src="img/adv-gallery-img-2.jpg" alt="Image description">
+                <img class="adv-gallery__img w-full block object-cover xl:h-full" src="img/p21.jpeg" alt="Image description">
             </div>
 
             <div class="lg:col-span-9 xl:col-[4/11] xl:row-[1/-1]">
-                <img class="adv-gallery__img w-full block object-cover xl:h-full" src="img/adv-gallery-img-3.jpg" alt="Image description">
+                <img class="adv-gallery__img w-full block object-cover xl:h-full" src="img/p3.jpeg" alt="Image description">
             </div>
 
             <div class="bg-gray-100 p-8 lg:col-span-3 xl:col-[11/13] xl:row-[1/-1] xl:flex">
                 <div class="xl:mt-auto">
                     <div class="hidden xl:block xl:h-24 xl:mb-6 xl:border-l xl:border-gray-700" aria-hidden="true"></div>
-                    <p class="text-[1.375rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="text-[1.375rem]">J'ai réalisé différent projets en groupe ou seul, qui témoigne de mes compétences.</p>
                 </div>
             </div>
+        </div>
+        <div class="text-right pt-4 pr-6 leading-relaxed"> 
+            <p><a class="bg-neutral-700 text-white shadow-md text-[1em] px-4 py-2 rounded-md relative inline-flex justify-center items-center whitespace-nowrap cursor-pointer no-underline leading-tight transition-all duration-200 hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-800" href="path.php">Mes projets →</a></p>
         </div>
     </section>
     <!-- Une ambition -->
